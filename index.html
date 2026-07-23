@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarun Chauhan | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Animated Glow -->
+  <div class="blob-1"></div>
+  <div class="blob-2"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Tarun<span>.dev</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <span class="badge animate-element">Welcome to my Portfolio</span>
+      <h1 class="animate-element">Hi, I'm <span class="highlight">Tarun Chauhan</span></h1>
+      <p class="animate-element">Web Developer & Tech Enthusiast building modern, scalable web applications.</p>
+      <div class="hero-btns animate-element">
+        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+        <a href="#about" class="btn btn-secondary">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="card glass-card">
+      <p>I am a passionate developer focused on creating intuitive, interactive, and responsive web experiences. I turn ideas into real-world applications using modern frontend tools and dynamic animations.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card glass-card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+      <div class="skill-card glass-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+      <div class="skill-card glass-card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+      <div class="skill-card glass-card"><i class="fab fa-github"></i><h3>GitHub</h3></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="project-grid">
+      <div class="project-card glass-card">
+        <div class="project-info">
+          <h3>Task 1 - Landing Page</h3>
+          <p>Visually appealing landing page with modern layout and responsive design.</p>
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Preview</a>
+        </div>
+      </div>
+      <div class="project-card glass-card">
+        <div class="project-info">
+          <h3>Task 2 - Pro Portfolio</h3>
+          <p>Interactive portfolio website built with GSAP smooth animations and glassmorphism UI.</p>
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Preview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Tarun Chauhan. All rights reserved.</p>
+  </footer>
+
+    <!-- GSAP Animation Script Direct Inside HTML -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // Navbar Entrance Animation
+      gsap.from(".navbar", {
+        duration: 1.2,
+        y: -80,
+        opacity: 0,
+        ease: "power3.out"
+      });
+
+      // Hero Section Elements Stagger Animation
+      gsap.from(".animate-element", {
+        duration: 1,
+        y: 40,
+        opacity: 0,
+        stagger: 0.25,
+        delay: 0.4,
+        ease: "power3.out"
+      });
+
+      // Skill Cards Entrance
+      gsap.from(".skill-card", {
+        duration: 1,
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.15,
+        delay: 0.8,
+        ease: "back.out(1.7)"
+      });
+
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
